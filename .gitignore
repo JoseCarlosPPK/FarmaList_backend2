@@ -1,0 +1,5 @@
+mysql_data/
+*.lock
+__pycache__
+.env
+.venv

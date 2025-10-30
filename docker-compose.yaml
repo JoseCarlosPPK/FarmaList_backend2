@@ -1,0 +1,21 @@
+services:
+   db:
+      build: .
+      container_name: mysql_tfg
+      restart: no
+      environment:
+         MYSQL_ROOT_PASSWORD: root
+         MYSQL_DATABASE: centros_farmacia
+      ports:
+         - '3306:3306'
+      volumes:
+         - ./mysql_data:/var/lib/mysql
+
+   phpmyadmin:
+      image: phpmyadmin:apache
+      container_name: phpmyadmin_tfg
+      restart: no
+      ports:
+         - '8080:80'
+      profiles:
+         - debug
