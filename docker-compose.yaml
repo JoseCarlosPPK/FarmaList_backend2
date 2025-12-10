@@ -1,7 +1,7 @@
 services:
    db:
       build: .
-      container_name: mysql_tfg
+      container_name: mysql_farmalist
       restart: no
       environment:
          MYSQL_ROOT_PASSWORD: root
@@ -13,7 +13,7 @@ services:
 
    phpmyadmin:
       image: phpmyadmin:apache
-      container_name: phpmyadmin_tfg
+      container_name: phpmyadmin_farmalist
       restart: no
       ports:
          - '8080:80'
